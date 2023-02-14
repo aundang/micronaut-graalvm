@@ -16,3 +16,34 @@
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
 
+## Basic Commands
+
+### Create Project
+
+```
+mn create-app example.micronaut.micronautguide --features=graalvm,serializationjackson --build=maven --lang=java
+
+```
+
+### To build native image:
+
+```
+./mvnw.bat package -Dpackaging=native-image
+
+```
+
+### To build docker image
+```
+./mvnw.bat package -Dpackaging=docker-native -Pgraalvm
+```
+
+### To run programm
+```
+./mvnw.bat mn:run
+```
+
+
+### To run test
+```
+./mvnw.bat test
+```
